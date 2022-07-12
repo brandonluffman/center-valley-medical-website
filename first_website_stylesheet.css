@@ -1,0 +1,990 @@
+/*
+------------------------------------------------------- Full Doc -----------------------------------------------------------------------------------------------------
+*/
+
+html * {
+    font-family:'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    font-weight:lighter;
+    box-sizing: border-box;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+    font-family:'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family:'Open Sans', sans-serif;
+    font-size: 20rem;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+}
+body {
+  color: #fff;
+  text-align: center;
+  
+}
+
+
+/*
+------------------------------------------------------- Full Nav -----------------------------------------------------------------------------------------------------
+*/
+
+.navbar {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    position: fixed !important;;
+    top: 0;
+    padding:0;
+    height:90px;
+    background:rgba(255,255,255,0.5);
+    z-index:9999;
+    transition:all 0.2s ease-in !important;
+    padding-bottom:0;
+    
+
+}
+
+.navbar.expand {
+        height:70px;
+        -webkit-transition: all 0.3s ease-in !important;
+        transition:all 0.3s ease-in !important;
+        font-size:0.3rem;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        background:rgba(255,255,255,1);
+
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0;
+    margin:0;
+    vertical-align:middle;
+    transition:0.2s;
+}
+
+.navbar-brand {
+    color:black;
+    font-weight:lighter;
+    margin-top:0.4rem;
+}
+
+.navbar-logo {
+    margin-right:1rem;
+}
+
+.navbar-brand:hover {
+    color:black;
+}
+
+.nav-link{
+    font-size: 0.9rem;
+    font-weight: lighter;
+    /*color: #475569;*/
+    color:black;
+    margin:0.2rem 2.5rem;
+}
+
+.nav-link:hover {
+
+    cursor:pointer;
+    text-decoration:none;
+    border-bottom:1px solid #0037ff;
+    transition: 0.2s ease-out tram;
+    transform-origin: center;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+
+}
+
+
+
+
+@media only screen and (max-width: 1300px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background:rgba(255,255,255);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        overflow:visible;
+
+        
+        
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+ 
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+
+
+
+
+
+/*
+------------------------------------------------------- Cover Page -----------------------------------------------------------------------------------------------------
+*/
+
+.cover .btn-md {
+    font-weight: lighter;
+    margin: 4rem 0rem 15rem 0rem;
+}
+
+.inner {
+    padding: 30px;
+    transition-delay:0.5s ease-in;
+}
+
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cover-heading {
+      text-align:left;
+      font-size: 4rem;
+      font-weight: lighter;
+      margin-bottom:2rem;
+  }
+
+
+.lead {
+      text-align: left;
+      margin: 1.5rem 0rem 0rem 0.6rem;
+}
+
+#cover-intro-heading {
+    margin: 15rem 0rem 0rem 0.6rem;
+    text-align:left;
+    font-weight:500;
+}
+
+#firstbody {
+    background-image: url("Medical Pics/possheader3.jpeg.crdownload");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width:100%;
+    height:auto;
+    z-index:0;
+
+}
+
+
+
+
+/*
+------------------------------------------------------- We Are -----------------------------------------------------------------------------------------------------
+*/
+
+
+.we-are-image {
+    width:100%;
+    height:auto;
+    display:block;
+    text-align:center;
+    padding-bottom:3rem;
+}
+
+@media (max-width: 1200px)  {
+    .container-fluid {
+        display:block;
+        overflow:hidden;
+    }
+
+}
+
+@media (max-width: 767px)  {
+    #we-are-total {
+        text-align:center !important;
+        padding-left: 0rem !important;
+    } 
+    .we-are-image {
+        width:90%!important;
+        padding-left: 10% !important;;
+    }
+
+}
+
+@media (max-width: 991px)  {
+    #we-are-total {
+        text-align:left;
+        padding-left: 0rem !important;
+        padding-top:7rem !important;
+        padding-bottom:9rem !important;
+    } 
+    .we-are-image {
+        width:90%;
+        padding-left:10%;
+    }
+}
+
+
+#we-are-total {
+    vertical-align:middle;
+    padding-top:11rem;
+    padding-bottom:12rem;
+    padding-left:10rem;
+    padding-right:0;
+    width:100%;
+    
+}
+
+
+
+.are-blue {
+    text-decoration: none;
+    color:blue;
+}
+
+.are-blue:hover {
+    color:blue;
+    text-decoration:none;
+
+}
+
+
+.we-are-text {
+    font-weight:lighter;
+    margin-bottom:0;
+}
+
+
+#appointment-btn-form {
+    text-align: left;
+    font-weight: lighter;
+     margin: 0em 0em 0em 0em;
+     background-color:#0275d8;
+     color:white;
+ }
+
+ #contact-btn-form {
+    background-color: red;
+    margin: 0em 0em 0em 0em;
+    color:white;
+    font-weight:lighter;
+}
+
+ #appointment-btn-form:hover, #appointment-btn-here:hover {
+    background-color:white;
+    border-color:#0037ff;
+    color: #0037ff;
+    box-shadow:0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration:0.1s ease-in;  
+}
+
+#contact-btn-form:hover {
+    background-color:white;
+    border-color:red;
+    color: red;
+    box-shadow:0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration:0.1s ease-in;  
+}
+
+
+
+/*
+------------------------------------------------------- Our Services -----------------------------------------------------------------------------------------------------
+*/
+
+
+
+#ambulance-background {
+    background:white;
+    padding:2rem;
+    border-radius: 50%;
+    font-size:1.5rem;
+    color:#0037ff;
+    opacity:0.6;
+    margin-right:1rem;
+    border:1px solid lightgrey;
+    box-shadow: 2px 2px 1px lightgrey;
+}
+
+.service-header {
+    font-size:1.5rem;
+    font-weight:lighter;
+
+}
+
+
+.Our-Services {
+    text-align:center;
+    margin-top:1.5rem;
+    margin-bottom:2rem;
+    font-weight:lighter;
+}
+
+#our-services-container {
+    display:inline-block;
+    margin-bottom:5rem;
+}
+
+.checkup-image {
+    width:80%;
+    height:auto;
+
+}
+
+#service-image {
+    text-align:center;
+}
+
+
+.service-grid-item {
+    font-size:0.5rem;
+    width:49%;
+    display:inline-block;
+    text-align:center;
+    justify-content: space-around;
+    padding:4rem 0rem;
+}
+
+
+#service-items {
+    width:49%;
+    display:inline-block;
+}
+
+
+@media (max-width: 576px)  {
+    .checkup-image {
+        width:70%;
+        padding-bottom:0;
+        margin-bottom:0;
+    }
+
+    #service-items{
+        width:100%;
+        margin-bottom:2rem;
+        text-align:center;
+    }
+    .service-grid-item {
+        text-align:center !important;
+    }
+
+    .service-header {
+        font-size:1rem;
+    }
+
+}
+
+@media (max-width: 768px)  {
+    .service-grid-item {
+        display:block;
+        width: 100% !important;;
+        text-align:center;
+    }
+    #service-items{
+        width: 100% !important;;
+        margin-bottom:2rem;
+        text-align:center;
+    }
+}
+
+@media (max-width: 992px)  {
+    #our-services-container {
+        display:block;
+    }
+    #service-items{
+        width: 50%;
+        margin-bottom:2rem;
+        text-align:center;
+    }
+    .service-grid-item {
+        width:50%;
+    }
+    .checkup-image {
+        width:70%;
+        text-align:center !important;
+        
+    }
+    #service-image {
+        text-align:center !important;
+    }
+
+}
+
+
+/*
+------------------------------------------------------- Your Health -----------------------------------------------------------------------------------------------------
+*/
+
+#whattup {
+    padding: 12rem 0rem 0rem 0rem;
+    text-align: center;
+    color:#0275d8;
+    font-size: 4rem;
+    font-weight:bold;
+
+}
+#our-text {
+    color:#0275d8;
+    font-weight:bold;
+}
+
+#whatsup {
+text-align: center;
+color:black;
+font-size: 1.2rem;
+font-weight:lighter;
+padding-bottom:1rem;
+}
+
+#learn-more-section {
+    background-image: url("Medical Pics/banni.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#learn-more-button {
+    text-align:center;
+    margin: 0rem 0rem 12rem 0rem;
+    font-weight:lighter;
+}
+
+#learn-more-button:hover {
+    border-color:#0037ff;
+    background-color:white;
+    color: #0037ff;
+    box-shadow:0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration:0.1s ease-in;  
+}
+
+#learn-more-button-div {
+    text-align:center;
+}
+
+
+
+
+
+/*
+------------------------------------------------------- Accolades -----------------------------------------------------------------------------------------------------
+*/
+
+#accolade-award {
+    height: auto;
+    width: 11rem;
+    margin: 4rem 2rem 8rem 2rem;
+    align-items: center;
+
+
+}
+
+@media (max-width: 1024px)  {
+    #accolade-award {
+        display:block;
+        width:30%;
+        margin-left:35%;
+        margin-bottom:2rem;
+    }
+
+
+
+   
+}
+
+#accolade-award:hover {
+    background-color:white;
+    border-color:#0037ff;
+    color: #0037ff;
+    box-shadow:0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration:0.3s; 
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+#accolade-text {
+    padding: 1.5em 0em 0em 0em;
+    text-align: center;
+    font-weight:lighter;
+    font-size:2.3rem;
+}
+
+#accolades {
+    background-color: white;
+
+    align-items: center;
+}
+
+#full-accolade {
+    text-align:center;
+}
+
+
+
+
+
+
+
+/*
+------------------------------------------------------- Depts -----------------------------------------------------------------------------------------------------
+*/
+
+#departments {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding:0rem 0rem;
+}
+
+.individual-department {
+    background:white;
+    border: 1px solid rgb(211,211,211);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    color: black;
+    font-size:smaller;
+    height:auto;
+    font-weight:bold;
+
+}
+
+.individual-department:hover {
+    box-shadow: 0 3px 50px rgb(211,211,211);
+    transition:ease .2s;
+    cursor:pointer;
+}
+
+#dept-text {
+    font-size:1.5rem;
+    font-weight:lighter;
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+
+#dept-paragraph {
+    font-size:0.8rem;
+    padding-top:1rem;
+    font-weight:lighter;
+    color:gray;
+}
+
+@media (max-width: 992px)  {
+    .shaking-hand-image {
+        width: 70% !important;
+        text-align:center !important;
+        padding-left:30% !important;
+        
+    }
+}
+
+@media (max-width: 768px)  {
+    .shaking-hand-image {
+        width:80% !important;
+        text-align:center !important;
+        padding-left:20% !important;
+        
+    }
+    #departments {
+        display:block;
+    }
+}
+
+#depts {
+    width:100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+#steth-icon {
+    color:blue;
+    padding-bottom:1rem;
+    padding-top:2rem;
+    font-size:2rem;
+    font-weight:lighter;
+}
+
+
+.shaking-hand-image {
+    width:100%;
+    height: 100%;
+    padding:0;
+    box-shadow: 0 3px 10px rgb(211,211,211);
+    overflow:hidden;
+    
+}
+
+#shaking-image {
+    padding:0;
+}
+
+
+
+/*
+------------------------------------------------------- Doctors -----------------------------------------------------------------------------------------------------
+*/
+
+.doctor-list {
+    font-weight:lighter;
+
+}
+
+#firstid  {
+    padding: 2em;
+    text-align: center;
+   background-color: #f4f4f4;
+ }
+
+
+#doof {
+     width:20em;
+     height:auto;
+
+ }
+#doof:hover {
+     opacity:0.5;
+     transition:0.1s ease-in;
+     background-color:white;
+     border-color:#0037ff;
+     color: #0037ff;
+     box-shadow:0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+     border-radius: 10px;
+     cursor:pointer;
+     float:inherit;
+ }
+
+#dooftext {
+    padding: 0.5em 0em 0em 0em;
+    font-weight: lighter;
+    font-size:1.5rem;
+ }
+
+#doof-titles {
+     font-size: 0.7em;
+     color: blue;
+     font-weight:500;
+     padding: 0rem 0rem 0.5rem 0rem;
+ }
+
+
+#full-our-doctors {
+     border:solid;
+ }
+
+#doof-intro {
+    padding: 2rem 0rem 4rem 0rem;
+    font-size:2.5rem;
+    font-weight:lighter;
+ }
+
+ #doof-description {
+     font-size:0.7rem;
+     margin-bottom:3rem;
+ }
+
+
+/*
+------------------------------------------------------- Testimonials -----------------------------------------------------------------------------------------------------
+*/
+
+
+
+.gallery {
+    background: white;
+    margin: 5rem 0rem;
+
+  }
+  
+.gallery-cell {
+    width:10rem;
+    height:10rem;
+    margin: 0rem 12rem;
+    background: #8C8;
+    background-image:url("Medical Pics/doccccc.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    counter-increment: gallery-cell;
+    border-radius:50%;
+    margin-bottom:20rem;
+
+}
+
+.carousel-img {
+ 
+    width:1rem;
+
+}
+#carousel-text {
+      text-align:center;
+      font-size:1rem;
+  }
+
+  #carousel-text h1 {
+    text-align:center;
+      font-size:1.2rem;
+  }
+
+  #carousel-text h2 {
+    text-align:center;
+    font-size:0.8rem;
+  }
+  
+  
+
+.gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 0px;
+    color: white;
+
+  }
+
+  #testimonials-header {
+      text-align:center;
+      margin-top:3.5rem;
+      font-weight:lighter;
+  }
+
+
+#patient-name {
+    font-size:4rem;
+}
+
+.testimonial-horizontal-line {
+    width:70%;
+    
+}
+
+/*
+------------------------------------------------------- Contact -----------------------------------------------------------------------------------------------------
+*/
+
+
+#contact-form-section {
+    background-color:white;
+    padding-top: 3rem;
+    padding-bottom:3rem;
+    font-size:0.8rem;
+  
+}
+
+#get-in-touch {
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 0.2rem;
+    margin-bottom: 3rem;
+    font-size:1.5rem;
+}
+
+.form-content > input[type=text], .form-content > input[type=textarea]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    text-align:left;
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+
+  .form-content > input[type=textarea]{
+    padding-bottom:13rem;
+
+  }
+ 
+#first-email {
+    width:49.5%;
+    resize:horizontal;
+    align-content: center;
+}
+
+
+#submit-btn-here {
+    font-weight:lighter;
+    margin-top:0.4rem;
+}
+
+#submit-btn-here:hover {
+    background-color:white;
+    border-color:#0037ff;
+    color: #0037ff;
+    box-shadow:0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration:0.1s ease-in;  
+}
+     
+/* ----------------------------------------------------- Carousel ------------------------------------------------------------------------ */
+
+
+
+
+
+/*
+------------------------------------------------------- Footer -----------------------------------------------------------------------------------------------------
+*/
+
+.footer-image {
+    width:12%;
+    overflow:hidden;
+
+}
+
+#footer-column, #footer-column-copyright {
+    display:block;
+    text-align:center;
+}
+
+#footer-column-copyright {
+    border-top: 1px lightgrey solid;
+}
+
+.footer-header {
+    font-size:1rem;
+    font-weight:lighter;
+    margin-bottom:3rem;
+    font-weight:lighter;
+}
+
+#footer-brand-name {
+    font-size:1.6rem;
+}
+
+.footer-subcontent {
+    font-size:0.8rem;
+    font-weight:lighter;
+    margin-bottom:1rem;
+}
+
+.footer-subcontent-anchor-tag:hover {
+    text-decoration: none;
+    color:#0645AD;
+
+}
+
+#footer-content-no-copyright {
+    margin-bottom:3rem;
+}
+
+#footer {
+    padding-top:3rem;
+    position: relative; 
+}
+
+#footer:before {
+    content: "";
+      background-image: url('Medical Pics/possheadphoto.jpeg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.2;
+    
+}
+
+.copyright-text {
+    font-weight:lighter;
+    font-size:0.8rem;
+    padding:2rem 0rem 2rem 0rem; 
+    margin-bottom: 0 !important;
+}
+
+#footer-social-icons {
+    font-size:1rem;
+    text-decoration:none;
+    border:1px #007bff solid;
+    border-radius:70px;
+    padding:1rem;
+}
+
+#footer-description {
+    margin-bottom:3rem;
+
+}
+
+.footer-brand {
+    text-align:left !important;
+    margin-left:2rem;
+
+}
+
+.footer-questions-information {
+    text-align:center;
+}
+
+
+
+
+@media (max-width: 768px)  {
+    .footer-brand {
+        text-align:center!important;
+        margin-left:0;
+    }
+
+    .footer-header  {
+        margin-top: 2rem;
+    }
+
+    #footer {
+        padding-top:0 !important;
+    }
+  
+}
